@@ -11,17 +11,27 @@ app.get("/",function(req,res){
 });
 
 app.get("/projects/raytracer",function(req,res){
-    res.sendFile(__dirname+"/homepage/RayTracer/raytraceIndex.html");
+    res.sendFile(__dirname+"/homepage/RayTracer/index.html");
 });
 
-["Builder.js","Index.html","Color.js","MathUtils.js","Client.js","Style.css"].forEach(function(com){
-    app.get(`/projects/raytrace${com}`,function(req,res){
-        res.sendFile(__dirname+`/homepage/RayTracer/raytrace${com}`);
+[
+    "builder.js",
+    "client.js",
+    "color.js",
+    "mathScary.js",
+    "mathUtils.js",
+    "object.js",
+    "parsedObjs.js",
+    "style.css"
+].forEach(function(com){
+    app.get(`/projects/raytraceHelpers/${com}`,function(req,res){
+        res.sendFile(__dirname+`/homepage/RayTracer/raytraceHelpers/${com}`);
     });
 })
 
+
 app.get('*', function(req, res){
-  res.status(404).send("What??");
+    res.status(404).send("404 Error! You aren't supposed to be here :)");
 });
 
 app.listen(port, function() {

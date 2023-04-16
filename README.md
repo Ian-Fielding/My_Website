@@ -1,2 +1,2 @@
-# My_Website
-Website Server Code for https://www.ianfielding.dev
+# ianfielding.dev
+This is the website server code for https://www.ianfielding.dev

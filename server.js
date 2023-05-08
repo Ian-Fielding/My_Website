@@ -14,6 +14,10 @@ app.get("/projects/raytracer",function(req,res){
     res.sendFile(__dirname+"/homepage/RayTracer/index.html");
 });
 
+app.get("/projects/tetris",function(req,res){
+    res.sendFile(__dirname+"/homepage/TetrisAI/index.html");
+});
+
 [
     "builder.js",
     "client.js",
@@ -26,6 +30,18 @@ app.get("/projects/raytracer",function(req,res){
 ].forEach(function(com){
     app.get(`/projects/raytraceHelpers/${com}`,function(req,res){
         res.sendFile(__dirname+`/homepage/RayTracer/raytraceHelpers/${com}`);
+    });
+});
+
+[
+    "style.css",
+    "pixi.js",
+    "gui.js",
+    "tetris.js",
+    "agents.js"
+].forEach(function(com){
+    app.get(`/projects/tetrisHelpers/${com}`,function(req,res){
+        res.sendFile(__dirname+`/homepage/TetrisAI/tetrisHelpers/${com}`);
     });
 })
 

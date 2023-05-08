@@ -1,3 +1,6 @@
 [submodule "homepage/RayTracer"]
 	path = homepage/RayTracer
 	url = https://github.com/Ian-Fielding/RayTracer.git
+[submodule "homepage/TetrisAI"]
+	path = homepage/TetrisAI
+	url = https://github.com/Ian-Fielding/TetrisAI.git

@@ -1,0 +1,67 @@
+body {
+	background-color: pink;
+	font-family: "Arial";
+	line-height: 1.6;
+}
+
+canvas {
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+#main {
+	position: absolute;
+
+	width: 75%;
+	color: white;
+}
+
+#title{
+	width: 100%;
+	font-size: 5em;
+	font-weight: bold;
+	text-align: center;
+	margin: 0 0 20px 0;
+	background-color: rgba(0,0,0,0.5);
+	backdrop-filter: blur(10px);
+	border-bottom: 5px solid white;
+}
+
+#desc {
+	width: 100%;
+	font-size: 3em;
+	font-weight: bold;
+	text-align: center;
+	margin: 0 0 400px 0;
+	background-color: rgba(0,0,0,0.5);
+	backdrop-filter: blur(10px);
+}
+
+.cont {
+	font-size: 1.5em;
+	margin: 0 0 400px 0;
+	padding: 20px;
+	background-color: rgba(0,0,0,0.5);
+	backdrop-filter: blur(10px);
+}
+
+.head {
+	padding: 10px;
+	margin: 0 0 20px 0;
+	font-size: 3em;
+	font-style: italic;
+	background-color: rgba(0,0,0,0.5);
+	backdrop-filter: blur(10px);
+	border-bottom: 5px solid white;
+}
+
+#github {
+	background-color: black;
+	background-color: rgba(0,0,0,0.5);
+	backdrop-filter: blur(10px);
+}
+
+a {
+	color:lightblue;
+}

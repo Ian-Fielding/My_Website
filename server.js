@@ -3,12 +3,20 @@ const app = express();
 const port = 5000;
 app.use(express.json());
 const path = require('path')
-app.use('/static', express.static(path.join(__dirname, 'homepage')));
-//app.use('/ray', express.static(path.join(__dirname, 'homepage/RayTracer')));
+//app.use('/static', express.static(path.join(__dirname, 'homepage')));
+
+app.use('/projects/raytraceHelpers', express.static(path.join(__dirname, 'homepage/RayTracer/raytraceHelpers')));
+app.use('/projects/tetrisHelpers', express.static(path.join(__dirname, 'homepage/TetrisAI/tetrisHelpers')));
+app.use('/projects/homepage', express.static(path.join(__dirname, 'homepage/main')));
+app.use('/node', express.static(path.join(__dirname, 'node_modules')));
 
 app.get("/",function(req,res){
-    res.sendFile(__dirname+"/homepage/index.html");
+    res.sendFile(__dirname+"/homepage/main/index.html");
 });
+
+app.get("/three",function(req,res){
+    res.redirect("/node/three");
+})
 
 app.get("/projects/raytracer",function(req,res){
     res.sendFile(__dirname+"/homepage/RayTracer/index.html");
@@ -18,6 +26,10 @@ app.get("/projects/tetris",function(req,res){
     res.sendFile(__dirname+"/homepage/TetrisAI/index.html");
 });
 
+
+
+
+/*
 [
     "builder.js",
     "client.js",
@@ -43,7 +55,7 @@ app.get("/projects/tetris",function(req,res){
     app.get(`/projects/tetrisHelpers/${com}`,function(req,res){
         res.sendFile(__dirname+`/homepage/TetrisAI/tetrisHelpers/${com}`);
     });
-})
+})*/
 
 
 app.get('*', function(req, res){

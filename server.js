@@ -6,6 +6,7 @@ const path = require('path');
 
 app.use('/projects/raytraceHelpers', express.static(path.join(__dirname, 'homepage/RayTracer/raytraceHelpers')));
 app.use('/projects/tetrisHelpers', express.static(path.join(__dirname, 'homepage/TetrisAI/tetrisHelpers')));
+app.use('/projects/ecru', express.static(path.join(__dirname, 'homepage/Ecru')));
 app.use('/projects/homepage', express.static(path.join(__dirname, 'homepage/main')));
 app.use('/node', express.static(path.join(__dirname, 'node_modules')));
 
@@ -23,6 +24,10 @@ app.get("/projects/raytracer",function(req,res){
 
 app.get("/projects/tetris",function(req,res){
     res.sendFile(__dirname+"/homepage/TetrisAI/index.html");
+});
+
+app.get("/projects/ecru",function(req,res){
+    res.sendFile(__dirname+"/homepage/Ecru/index.html");
 });
 
 app.get('*', function(req, res){

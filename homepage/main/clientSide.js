@@ -147,4 +147,12 @@ function animate() {
 	renderer.render(scene, camera);
 }
 
-manager.onLoad = animate;
+
+
+manager.onLoad = function(){
+	let loading = document.getElementById("loading");
+	loading.parentNode.removeChild(loading);
+
+	document.getElementById("main").style.display="block";
+	animate();
+};

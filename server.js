@@ -6,7 +6,8 @@ const path = require('path');
 
 app.use('/projects/raytraceHelpers', express.static(path.join(__dirname, 'homepage/RayTracer/raytraceHelpers')));
 app.use('/projects/tetrisHelpers', express.static(path.join(__dirname, 'homepage/TetrisAI/tetrisHelpers')));
-app.use('/projects/ecru', express.static(path.join(__dirname, 'homepage/Ecru')));
+app.use('/projects/ecruHelpers', express.static(path.join(__dirname, 'homepage/Ecru/ecruHelpers')));
+app.use('/ecruHelpers', express.static(path.join(__dirname, 'homepage/Ecru/ecruHelpers')));
 app.use('/projects/homepage', express.static(path.join(__dirname, 'homepage/main')));
 app.use('/node', express.static(path.join(__dirname, 'node_modules')));
 
